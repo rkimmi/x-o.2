@@ -18,10 +18,8 @@ function makeMove (element) {
 
     console.log(playerOneTurn)
     console.log(activePlayer)
-    $(element).text(activePlayer);
+
+    if( $(element).is(':empty') ) {
+        $(element).text(activePlayer);
+    }
 }
-
-
-
-
-

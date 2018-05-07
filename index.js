@@ -1,9 +1,12 @@
+let tl = 'top-left'
+
 let playerOne = 'x'
 let playerTwo = 'o'
 
 let playerOneTurn = true
 
 function makeMove (element) {
+    console.log(tl)
     if ($(element).is(':empty') && (playerOneTurn)) {
         activePlayer = playerOne
         playerOneTurn = false

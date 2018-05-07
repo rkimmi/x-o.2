@@ -1,11 +1,28 @@
 // $(selector).action()
 
-const playerOne = 'X' //
-const playerTwo = '' //
+let playerOne = 'x'
+let playerTwo = 'o'
+
+let playerOneTurn = true
 
 function makeMove (element) {
-    let playerOneTurn = true
-    let playerTwoTurn = false
 
-    $(element).text(playerOne);
+    if (playerOneTurn) {
+        activePlayer = playerOne
+        playerOneTurn = false
+    }
+
+    else if (!playerOneTurn) {
+        activePlayer = playerTwo
+        playerOneTurn = true
+    }
+
+    console.log(playerOneTurn)
+    console.log(activePlayer)
+    $(element).text(activePlayer);
 }
+
+
+
+
+

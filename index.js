@@ -21,10 +21,17 @@ function checkWin () {
 }
 
 function checkRows () {
+    // if ($('#blockOne').val() !== '' && 
     if ($('#blockOne').text() === $('#blockTwo').text() && 
         $('#blockTwo').text() === $('#blockThree').text()) {
-            console.log('win!')
+            console.log('first row win!')
         }
+    if ($('#blockFour').text() === $('#blockFive').text() && 
+        $('#blockFive').text() === $('#blockSix').text()) {
+            console.log('second row win!')
+        }
+
+        else (console.log('no'))
 }
 
 

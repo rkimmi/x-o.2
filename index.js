@@ -17,21 +17,27 @@ function makeMove (element) {
 }
 
 function checkWin () {
+    if ($('#blockOne').text().length > 0) {
+        console.log('not empty!')
+    }
     checkRows()
 }
 
 function checkRows () {
     // if ($('#blockOne').val() !== '' && 
-    if ($('#blockOne').text() === $('#blockTwo').text() && 
+    if ($('#blockOne').text().length > 0 &&
+        $('#blockOne').text() === $('#blockTwo').text() && 
         $('#blockTwo').text() === $('#blockThree').text()) {
             console.log('first row win!')
         }
-    if ($('#blockFour').text() === $('#blockFive').text() && 
+
+    if ($('#blockFour').text().length > 0 &&
+        $('#blockFour').text() === $('#blockFive').text() && 
         $('#blockFive').text() === $('#blockSix').text()) {
             console.log('second row win!')
         }
 
-        else (console.log('no'))
+        else (console.log(''))
 }
 
 

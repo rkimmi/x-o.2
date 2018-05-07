@@ -4,38 +4,44 @@ let playerTwo = 'o'
 let playerOneTurn = true
 
 function makeMove (element) {
-    if ( $(element).is(':empty') && (playerOneTurn)) {
+    if ($(element).is(':empty') && (playerOneTurn)) {
         activePlayer = playerOne
         playerOneTurn = false
     }
-    else if ( $(element).is(':empty') && (!playerOneTurn)) {
+    else if ($(element).is(':empty') && (!playerOneTurn)) {
         activePlayer = playerTwo
         playerOneTurn = true
     }
-        $(element).text(activePlayer);
-        checkWin ()
+    $(element).text(activePlayer);
+    checkWin ()
 }
 
 function checkWin () {
-    checkRows()
+    checkRows ()
 }
 
 function checkRows () {
     // if ($('#blockOne').val() !== '' && 
     if ($('#blockOne').text().length > 0 &&
-        $('#blockOne').text() === $('#blockTwo').text() && 
+        $('#blockOne').text() === $('#blockTwo').text() &&
         $('#blockTwo').text() === $('#blockThree').text()) {
-            let winner = $('#blockOne').text() 
-            $('p').text(`Player ${winner} wins!`)
-        }
+        let winner = $('#blockOne').text()
+        $('p').text(`Player ${winner} wins!`)
+    }
 
     if ($('#blockFour').text().length > 0 &&
-        $('#blockFour').text() === $('#blockFive').text() && 
+        $('#blockFour').text() === $('#blockFive').text() &&
         $('#blockFive').text() === $('#blockSix').text()) {
-            console.log('second row win!')
-        }
+        let winner = $('#blockFour').text()
+        $('p').text(`Player ${winner} wins!`)
+    }
+    if ($('#blockSeven').text().length > 0 &&
+        $('#blockSeven').text() === $('#blockEight').text() &&
+        $('#blockEight').text() === $('#blockNine').text()) {
+        let winner = $('#blockSeven').text()
+        $('p').text(`Player ${winner} wins!`)
+    }
 
-        else (console.log(''))
 }
 
 

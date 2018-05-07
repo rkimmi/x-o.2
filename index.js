@@ -17,9 +17,6 @@ function makeMove (element) {
 }
 
 function checkWin () {
-    if ($('#blockOne').text().length > 0) {
-        console.log('not empty!')
-    }
     checkRows()
 }
 
@@ -28,7 +25,8 @@ function checkRows () {
     if ($('#blockOne').text().length > 0 &&
         $('#blockOne').text() === $('#blockTwo').text() && 
         $('#blockTwo').text() === $('#blockThree').text()) {
-            console.log('first row win!')
+            let winner = $('#blockOne').text() 
+            $('p').text(`Player ${winner} wins!`)
         }
 
     if ($('#blockFour').text().length > 0 &&

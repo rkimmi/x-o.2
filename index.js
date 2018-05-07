@@ -6,7 +6,6 @@ let playerTwo = 'o'
 let playerOneTurn = true
 
 function makeMove (element) {
-
     if (playerOneTurn) {
         activePlayer = playerOne
         playerOneTurn = false

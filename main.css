@@ -17,7 +17,9 @@
 .block {
     width: 150px;
     height: 150px;
-    border-radius: 10px;
-    border: solid;
-    border-width: 2px;
+    border: dashed;
+    border-width: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 120px;
+    text-align: center;
 }

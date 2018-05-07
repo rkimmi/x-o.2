@@ -6,20 +6,15 @@ let playerTwo = 'o'
 let playerOneTurn = true
 
 function makeMove (element) {
-    if (playerOneTurn) {
+
+    if ( $(element).is(':empty') && (playerOneTurn)) {
         activePlayer = playerOne
         playerOneTurn = false
     }
-
-    else if (!playerOneTurn) {
+    else if ( $(element).is(':empty') && (!playerOneTurn)) {
         activePlayer = playerTwo
         playerOneTurn = true
     }
-
-    console.log(playerOneTurn)
-    console.log(activePlayer)
-
-    if( $(element).is(':empty') ) {
         $(element).text(activePlayer);
-    }
+        
 }

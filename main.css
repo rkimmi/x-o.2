@@ -1,0 +1,23 @@
+.body {
+    height: 100%;
+    width: 100%;
+}
+
+.board {
+    width: 50%;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.block {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: solid;
+    border-width: 2px;
+}

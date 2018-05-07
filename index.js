@@ -1,0 +1,3 @@
+// $(selector).action()
+
+// $("div").hide()

@@ -1,12 +1,9 @@
-// $(selector).action()
-
 let playerOne = 'x'
 let playerTwo = 'o'
 
 let playerOneTurn = true
 
 function makeMove (element) {
-
     if ( $(element).is(':empty') && (playerOneTurn)) {
         activePlayer = playerOne
         playerOneTurn = false
@@ -16,5 +13,21 @@ function makeMove (element) {
         playerOneTurn = true
     }
         $(element).text(activePlayer);
-        
+        checkWin ()
 }
+
+function checkWin () {
+    checkRows()
+}
+
+function checkRows () {
+    if ($('#blockOne').text() === $('#blockTwo').text() && 
+        $('#blockTwo').text() === $('#blockThree').text()) {
+            console.log('win!')
+        }
+}
+
+
+
+
+

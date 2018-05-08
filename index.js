@@ -1,4 +1,3 @@
-let tl = 'top-left'
 
 let playerOne = 'x'
 let playerTwo = 'o'
@@ -6,7 +5,6 @@ let playerTwo = 'o'
 let playerOneTurn = true
 
 function makeMove (element) {
-    console.log(tl)
     if ($(element).is(':empty') && (playerOneTurn)) {
         activePlayer = playerOne
         playerOneTurn = false
@@ -26,62 +24,64 @@ function checkWin () {
 }
 
 function checkRows () {
-    // if ($('#blockOne').val() !== '' && 
-    if ($('#blockOne').text().length > 0 &&
-        $('#blockOne').text() === $('#blockTwo').text() &&
-        $('#blockTwo').text() === $('#blockThree').text()) {
-        let winner = $('#blockOne').text()
+    if ($('#one').text().length > 0 &&
+        $('#one').text() === $('#two').text() &&
+        $('#two').text() === $('#three').text()) {
+        let winner = $('#one').text()
         $('p').text(`Player ${winner} wins!`)
     }
-    if ($('#blockFour').text().length > 0 &&
-        $('#blockFour').text() === $('#blockFive').text() &&
-        $('#blockFive').text() === $('#blockSix').text()) {
-        let winner = $('#blockFour').text()
+    if ($('#four').text().length > 0 &&
+        $('#four').text() === $('#five').text() &&
+        $('#five').text() === $('#six').text()) {
+        let winner = $('#four').text()
         $('p').text(`Player ${winner} wins!`)
     }
-    if ($('#blockSeven').text().length > 0 &&
-        $('#blockSeven').text() === $('#blockEight').text() &&
-        $('#blockEight').text() === $('#blockNine').text()) {
-        let winner = $('#blockSeven').text()
+    if ($('#seven').text().length > 0 &&
+        $('#seven').text() === $('#eight').text() &&
+        $('#eight').text() === $('#nine').text()) {
+        let winner = $('#seven').text()
         $('p').text(`Player ${winner} wins!`)
     }
 }
 
 function checkColumns () {
-    if ($('#blockOne').text().length > 0 &&
-        $('#blockOne').text() === $('#blockFour').text() &&
-        $('#blockFour').text() === $('#blockSeven').text()) {
-        let winner = $('#blockOne').text()
+    if ($('#one').text().length > 0 &&
+        $('#one').text() === $('#four').text() &&
+        $('#four').text() === $('#seven').text()) {
+        let winner = $('#one').text()
         $('p').text(`Player ${winner} wins!`)
     }
-    if ($('#blockTwo').text().length > 0 &&
-        $('#blockTwo').text() === $('#blockFive').text() &&
-        $('#blockFive').text() === $('#blockEight').text()) {
-        let winner = $('#blockFour').text()
+    if ($('#two').text().length > 0 &&
+        $('#two').text() === $('#five').text() &&
+        $('#five').text() === $('#eight').text()) {
+        let winner = $('#two').text()
         $('p').text(`Player ${winner} wins!`)
     }
-    if ($('#blockThree').text().length > 0 &&
-        $('#blockThree').text() === $('#blockSix').text() &&
-        $('#blockSix').text() === $('#blockNine').text()) {
-        let winner = $('#blockThree').text()
+    if ($('#three').text().length > 0 &&
+        $('#three').text() === $('#six').text() &&
+        $('#six').text() === $('#nine').text()) {
+        let winner = $('#three').text()
         $('p').text(`Player ${winner} wins!`)
     }
 }
 
 function checkDiagonal () {
-    if ($('#blockOne').text().length > 0 &&
-        $('#blockOne').text() === $('#blockFive').text() &&
-        $('#blockFive').text() === $('#blockNine').text()) {
-        let winner = $('#blockOne').text()
+    if ($('#one').text().length > 0 &&
+        $('#one').text() === $('#five').text() &&
+        $('#five').text() === $('#nine').text()) {
+        let winner = $('#one').text()
         $('p').text(`Player ${winner} wins!`)
     }
-    if ($('#blockThree').text().length > 0 &&
-        $('#blockThree').text() === $('#blockFive').text() &&
-        $('#blockFive').text() === $('#blockSeven').text()) {
-        let winner = $('#blockThree').text()
+    if ($('#three').text().length > 0 &&
+        $('#three').text() === $('#five').text() &&
+        $('#five').text() === $('#seven').text()) {
+        let winner = $('#three').text()
         $('p').text(`Player ${winner} wins!`)
     }
 }
+
+
+
 
 
 
